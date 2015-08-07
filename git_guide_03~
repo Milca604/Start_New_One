@@ -1,0 +1,14 @@
+再來需要清理一下之前因為測試所製造的檔案
+首先進入terminal裡面
+
+然後打入下面的command line
+
+1.	git rm readme2.txt
+2.	git commit -m "removes readme2.txt"
+3.	git push
+
+第一步使用git指令rm(remove) readme2.txt
+第二步commit剛剛的rm
+第三步push這個commit到remote repo裡面
+
+
