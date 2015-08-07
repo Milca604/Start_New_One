@@ -1,0 +1,9 @@
+this file is at the location follows, right before add/commit
+
+pwd
+/home/rex/文件/MyGit/Start_New_One
+(MyGit是我設定我的local repo所使用的folder)
+
+在這個地方的檔案才是跟網路的repo連線的位置
+所有要放進remote repo(也就是github的repo)的檔案都是從這個位置
+經過add/commit而送進remote repo裡面

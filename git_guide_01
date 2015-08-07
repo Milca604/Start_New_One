@@ -1,0 +1,14 @@
+this is a beginner's guide to use github 
+
+我們兩人每個人都各自有一個github的帳號
+
+我一開始將你的github的folder "The_New_One" fork(轉移) 到我的帳號底下後
+我便成為這個在我名字底下的這個同名folder "The_New_One"的writer 
+
+我現在對The_New_One的作業都是獨立進行的
+當我作業到一個階段後 (包括我自己對 RexMie自己持有的 The_New_One所進行的commit, add等行為)
+我將可以拿著這個經過我改寫後的The_New_One對你發出pull request
+而後你可以決定如何對這個pull request做出哪種動作 
+應該是包含採用, 編輯 或是刪除等等的選項
+
+如此說明還了解嗎?
