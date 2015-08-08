@@ -1,0 +1,4 @@
+#This file is a placeholder to put all the questions that comes up.
+#This may possibly be replaced by "Issue" function in GitHub.
+
+1. 現在對於Branching還是有點不清楚要怎麼把兩個branch merge起來 因為發現我一直在Branch 1 後來才發現你在Branch Master裡面放了很多東西
