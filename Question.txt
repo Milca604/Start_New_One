@@ -1,4 +1,6 @@
 #This file is a placeholder to put all the questions that comes up.
 #This may possibly be replaced by "Issue" function in GitHub.
 
-1. 現在對於Branching還是有點不清楚要怎麼把兩個branch merge起來 因為發現我一直在Branch 1 後來才發現你在Branch Master裡面放了很多東西
+#現在對於Branching還是有點不清楚要怎麼把兩個branch merge起來 因為發現我一直在Branch 1 後來才發現你在Branch Master裡面放了很多東西.
+#剛才在git website發現一個方法把 commit merge起來了 之後就可以 merge to master and delete branch.
+#Branch 有 restore功能 目前為止 everything looks good. Question closed
