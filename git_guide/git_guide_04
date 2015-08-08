@@ -2,11 +2,25 @@
 # 將與git branch相關的所有資訊儲存在這個文件當中
 
 
-$git checkout -b <new_branch_name>
+$ git checkout -b <new_branch_name>
 create new a new branch named new_branch_name and switch to the new branch
 
-$git branch -d <branch_name>
+$ git branch -d <branch_name>
 delete an existing branch name <branch_name>
 
-$git branch <branch_name>
+$ git branch <branch_name>
 switch to <branch_name>
+
+
+
+- Create A Branch then Merge w/ Master
+follow以下的步驟來示範如何將一個test用的branch跟master branch merge在一起
+
+1. $ git checkout -b test	創造一個branch叫做test
+2. $ git push			將剛剛製作的branch commit到remote repo裡
+3. 此時branch test裡面應該有跟master裡面所有的檔案一樣的複製版本
+4. 對test裡面的任何一個檔案做出更改
+5. add/commit 那個更改過的檔案 而後$ git push origin test
+6. $ git checkout master	switch to master branch
+7. $ git merge test		merge master以及test兩個branch
+8. $ git push origin master	將merge過後的master publish到remote repo上面
