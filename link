@@ -1,0 +1,7 @@
+很簡單易懂的git guide
+http://rogerdudler.github.io/git-guide/
+
+
+解釋git push origin <branch_name>的設定方式 
+(必讀 push設定錯誤可能會損毀原始檔案)
+http://tinyurl.com/d9yjg6f

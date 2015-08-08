@@ -1,0 +1,22 @@
+再來需要清理一下之前因為測試所製造的檔案
+首先進入terminal裡面
+
+然後打入下面的command line
+
+1.	git rm readme2.txt
+2.	git commit -m "removes readme2.txt"
+3.	git push
+
+第一步使用git指令rm(remove) readme2.txt
+第二步commit剛剛的rm
+第三步push這個commit到remote repo裡面
+
+再來我們試試看用wild card一次同時rm兩個當時的readme3.txt跟readme4.txt
+我不確定wildcard可不可以在git裡面用
+你嘗試過之後告訴我結論
+
+1.	git rm read*.txt
+2.	git commit -m "removes readme3.txt and readme4.txt"
+3.	git push
+
+*這個符號代表的意思是
