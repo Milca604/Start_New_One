@@ -1,0 +1,12 @@
+# Branch 相關
+# 將與git branch相關的所有資訊儲存在這個文件當中
+
+
+$git checkout -b <new_branch_name>
+create new a new branch named new_branch_name and switch to the new branch
+
+$git branch -d <branch_name>
+delete an existing branch name <branch_name>
+
+$git branch <branch_name>
+switch to <branch_name>
