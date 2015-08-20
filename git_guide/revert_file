@@ -1,0 +1,73 @@
+original post about revert file in git		- http://tinyurl.com/ogfmhln
+
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+Temporarily switch to a different commit
+
+# This will detach your HEAD, that is, leave you with no branch checked out:
+git checkout 0d1d7fc32			- go to commit 0d1d7fc32
+
+git checkout -b old-state 0d1d7fc32	- creates branch old-state with commit 0d1d7fc32
+					- To go back to where you were, just check out the branch you were on again.
+
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+Hard delete unpublished commits
+
+# This will destroy any local modifications.
+# Don't do it if you have uncommitted work you want to keep.
+git reset --hard 0d1d7fc32
+
+# Alternatively, if there's work to keep:
+git stash
+git reset --hard 0d1d7fc32
+git stash pop
+# This saves the modifications, then reapplies that patch after resetting.
+# You could get merge conflicts, if you've modified things which were
+# changed since the commit you reset to.
+
+
+
+
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+Undo published commits with new commits
+
+# This will create three separate revert commits:
+git revert a867b4af 25eee4ca 0766c053
+
+# It also takes ranges. This will revert the last two commits:
+git revert HEAD~2..HEAD
+
+# Reverting a merge commit
+git revert -m 1 <merge_commit_sha>
+
+# To get just one, you could use `rebase -i` to squash them afterwards
+# Or, you could do it manually (be sure to do this at top level of the repo)
+# get your index and work tree into the desired state, without changing HEAD:
+git checkout 0d1d7fc32 .
+
+# Then commit. Be sure and write a good message describing what you just did
+git commit
+
+
+
+
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+Lots of complicated and dangerous answers here, but it's actually easy:
+
+git revert --no-commit 0766c053..HEAD
+git commit
+This will revert everything from the HEAD back to the commit hash, meaning it will recreate that commit state in the working tree as if every commit since had been walked back. You can then commit the current tree, and it will create a brand new commit essentially equivalent to the commit you "reverted" to.
+
+(The --no-commit flag lets git revert all the commits at once- otherwise you'll be prompted for a message for each commit in the range, littering your history with unnecessary new commits.)
+
+This is a safe and easy way to rollback to a previous state. No history is destroyed, so it can be used for commits that have already been made public.
+
+
+
+
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+useful links
+- git-revert manual page
+http://schacon.github.io/git/git-revert.html
+
+- Undoing Merges
+http://tinyurl.com/kazs5pu
